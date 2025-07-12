@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="./static/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Employee Directory</h1>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search by name or email" />
+      <button id="filter-btn">Filter</button>
+      <button id="add-employee-btn">Add Employee</button>
+    </div>
+
+    <!-- Filter Panel (hidden initially) -->
+    <div class="filter-panel hidden" id="filter-panel">
+      <label>First Name:</label>
+      <input type="text" id="filter-firstname" />
+      <label>Department:</label>
+      <input type="text" id="filter-department" />
+      <label>Role:</label>
+      <input type="text" id="filter-role" />
+      <button id="apply-filter-btn">Apply Filter</button>
+      <button id="close-filter-btn">Close</button>
+    </div>
+
+    <!-- Sort Controls -->
+    <div class="sort-controls">
+      <label for="sort-field">Sort by:</label>
+      <select id="sort-field">
+        <option value="">None</option>
+        <option value="firstName">First Name</option>
+        <option value="department">Department</option>
+      </select>
+    </div>
+
+    <!-- Employee List -->
+    <div id="employee-list" class="employee-list"></div>
+
+    <!-- Pagination Controls -->
+    <div class="pagination" id="pagination"></div>
+  </div>
+
+  <script src="./static/js/data.js"></script>
+  <script src="./static/js/app.js"></script>
+</body>
+</html>
